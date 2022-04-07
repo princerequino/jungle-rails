@@ -39,6 +39,22 @@ main section.categories-show {
         opacity: 0.3;
         transition: all 0.3s;
       }
+      
+      aside.soldout {
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 10px;
+        background-color: red;
+        border-top-left-radius: 4px;
+        border-bottom-right-radius: 20px;
+        font-size: 0.8em;
+        p {
+          font-weight: bold;
+          color: white;
+          margin: 0;
+        }
+      }
 
       aside.price {
         position: absolute;
