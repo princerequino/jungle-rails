@@ -4,6 +4,13 @@
     <h1>My Cart</h1>
   </header>
 
+<% if enhanced_cart.length == 0 %>
+  <div class="alert alert-info" role="alert">
+    <h3>Your Cart is Empty! </h3>
+    </br><a href="/" class="alert-link"> Go Back </a>
+  </div>
+<% else %>
+
   <div class="panel panel-default items">
     <table class="table table-bordered">
       <thead>
@@ -25,7 +32,7 @@
             TOTAL:
           </th>
           <th>
-            <%= cart_subtotal_cents / 100.0 %>
+            <%= humanized_money_with_symbol cart_subtotal_cents / 100.00 %>
           </th>
         </tr>
       </tfoot>
@@ -40,13 +47,13 @@
           data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
           data-amount="<%= cart_subtotal_cents %>"
           data-name="Jungle"
-          data-description="Khurram Virani's Jungle Order"
+          data-description="Prince's Jungle Order"
           data-locale="auto"
-          data-email="kvirani@gmail.com"
+          data-email="prince@gmail.com"
           data-currency="cad">
         </script>
       <% end %>
     </div>
   </div>
-
-</section>
+<%end%>
+</section> 

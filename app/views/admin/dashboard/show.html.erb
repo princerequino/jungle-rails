@@ -1,2 +1,7 @@
-<h1>Admin::Dashboard#show</h1>
-<p>Find me in app/views/admin/dashboard/show.html.erb</p>
+<h1>Admin Dashboard</h1>
+
+<div class="alert alert-info" role="alert">
+  <h4>Total <a href="/admin/products" class="alert-link"><u>Products</u></a> in the database: <strong><%= @total_products %></strong></h4>
+  </br>
+  <h4>Total  <a href="/admin/categories" class="alert-link"><u>Categories</u></a> in the database: <strong><%= @total_categories %></strong></h4>
+</div>
