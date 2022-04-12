@@ -31,3 +31,37 @@ RSpec.describe User, type: :model do
 
   end
 end
+
+describe '.authenticate_with_credentials' do
+
+  it "should return a matching instance if the user login is authenticated" do
+    new_user = User.new(name: "Boris jon", email: "e@gmail.com", password: "rush123", password_confirmation: "rush123")
+    new_user.save
+
+    authentication = new_user.authenticate_with_credentials(new_user[:password_digest], new_user[:email])
+
+    expect(new_user).to eq(authentication)
+
+  end
+
+  it "should login despite email case being incorrect" do
+    new_user = User.new(name: "Boris jon", email: "eXample@gmail.com", password: "rush123", password_confirmation: "rush123")
+    new_user.save
+
+    authentication = new_user.authenticate_with_credentials(new_user[:password_digest], "EXAMPLE@gmail.com")
+
+    expect(new_user).to eq(authentication)
+
+  end
+
+  it "should login despite email whitespace being incorrect" do
+    new_user = User.new(name: "Boris jon", email: "eXample@gmail.com", password: "rush123", password_confirmation: "rush123")
+    new_user.save
+
+    authentication = new_user.authenticate_with_credentials(new_user[:password_digest], "  EXAMPLE@gmail.com  ")
+
+    expect(new_user).to eq(authentication)
+
+  end
+
+end
