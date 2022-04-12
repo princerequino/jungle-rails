@@ -27,7 +27,7 @@ RSpec.feature "ProductDetails", type: :feature, js: true do
     # lets program wait for page load 
     sleep 5
 
-    save_screenshot
+    # save_screenshot
 
     expect(page).to have_css 'article.product-detail'
     
