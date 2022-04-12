@@ -2,6 +2,20 @@
 
 A mini e-commerce application built with Rails 4.2 for purposes of teaching Rails by example.
 
+## Screenshots
+
+![Home Page](https://github.com/princerequino/jungle-rails/blob/master/public/images/Homepage.JPG)
+
+![Product Details](https://github.com/princerequino/jungle-rails/blob/master/public/images/ProductDetails.JPG)
+
+![Admin Products](https://github.com/princerequino/jungle-rails/blob/master/public/images/AdminProducts.JPG)
+
+![Empty Cart](https://github.com/princerequino/jungle-rails/blob/master/public/images/EmptyCart.JPG)
+
+![Cart](https://github.com/princerequino/jungle-rails/blob/master/public/images/Cart.JPG)
+
+![Order Details](https://github.com/princerequino/jungle-rails/blob/master/public/images/OrderDetails.JPG)
+
 ## Additional Steps for Apple M1 Machines
 
 1. Make sure that you are runnning Ruby 2.6.6 (`ruby -v`)
